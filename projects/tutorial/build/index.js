@@ -79,3 +79,34 @@ const fa = (...m) => {
 };
 const x1 = fa(1, 23, 4, 5, 6, 7, 7);
 console.log(x1);
+// Nver type 
+const err = new Error();
+const errorHandler = () => {
+    throw new Error();
+};
+// classes 
+class Player {
+    constructor(height, weight) {
+        this.height = height;
+        this.weight = weight;
+    }
+}
+// could be shortended as
+class Player1 {
+    constructor(height, weight, power) {
+        this.height = height;
+        this.weight = weight;
+        this.power = power;
+        this.getMyHeight = () => this.height;
+    }
+}
+const abhi = new Player1(100, 150, 23);
+console.log(abhi.weight);
+class Player2 extends Player1 {
+    constructor(height, weight, power, urmy) {
+        super(height, weight, power);
+        this.urmy = urmy;
+    }
+}
+const s1 = new Player2(1, 2, 3, false);
+console.log(s1.);

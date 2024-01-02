@@ -146,4 +146,48 @@ const fa:Fun = (...m) =>{
 const x1:number[] = fa(1,23,4,5,6,7,7);
 console.log(x1);
 
+// Nver type 
+const err = new Error();
 
+const errorHandler = () =>{
+   throw new Error();
+}
+
+
+// classes 
+
+
+class Player {
+  private height;
+  public weight;
+
+   constructor(height:number, weight:number){
+     this.height = height;
+     this.weight = weight;
+   }
+}
+
+// could be shortended as
+
+
+class Player1{
+  constructor(private height:number, public weight:number, protected power:number){
+       
+  }
+
+  getMyHeight = () => this.height; 
+}
+
+const abhi = new Player1(100, 150, 23);
+console.log(abhi.weight);
+
+class Player2 extends Player1{
+   urmy: boolean; 
+  constructor(height: number, weight: number, power: number, urmy:boolean){
+     super(height, weight, power)
+     this.urmy = urmy
+    }
+}
+const s1 =  new Player2(1,2,3,false);
+
+console.log(s1.);
