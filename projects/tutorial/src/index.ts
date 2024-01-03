@@ -190,4 +190,53 @@ class Player2 extends Player1{
 }
 const s1 =  new Player2(1,2,3,false);
 
-console.log(s1.);
+console.log(s1.urmy);
+
+// type assertion
+
+ // const btn = document.getElementById("btn") as HTMLElement; 
+ // const btn = <HTMLElement> document.getElementById("btn");
+ // btn.onclick;
+
+ interface Person {
+    name:string,
+    email:string,
+ }
+
+ const o1:Person = {
+   name : "ksjiti",
+   email : "asdasda"
+ };
+
+
+  const getName = ():string =>{ return o1.name;}
+  const getEmail = ():string => { return o1.email;}
+  
+  const getData = (key:string) =>{
+    return o1[key as keyof Person]
+  }
+
+
+ console.log(getEmail());
+ console.log(getName());
+ console.log(getData("email"));
+ 
+ 
+
+ // utility Classes
+
+ // 1 Parital type
+
+type User = {
+  name:string,
+  email:string,
+}
+
+type User2 = Partial<User>
+//   type User2 = {
+//   name?: string | undefined;
+//   email?: string | undefined;
+// }
+
+// Required Type -- opposite to parital
+

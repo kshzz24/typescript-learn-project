@@ -109,4 +109,21 @@ class Player2 extends Player1 {
     }
 }
 const s1 = new Player2(1, 2, 3, false);
-console.log(s1.);
+console.log(s1.urmy);
+const o1 = {
+    name: "ksjiti",
+    email: "asdasda"
+};
+const getName = () => { return o1.name; };
+const getEmail = () => { return o1.email; };
+const getData = (key) => {
+    return o1[key];
+};
+console.log(getEmail());
+console.log(getName());
+console.log(getData("email"));
+//   type User2 = {
+//   name?: string | undefined;
+//   email?: string | undefined;
+// }
+// Required Type -- opposite to parital
